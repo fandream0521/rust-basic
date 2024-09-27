@@ -36,11 +36,11 @@ fn read_number() -> Option<u32> {
         if let Ok(_) = io::stdin().read_line(&mut guess) {
             // 尝试将输入解析为数字
             if let Ok(num) = guess.trim().parse::<u32>() {
-                return Some(num);
+                break Some(num);
             } else {
                 // 如果用户输入"quit"，则返回None
                 if "quit".eq(&guess.trim().to_lowercase()) {
-                    return None;
+                    break None;
                 } else {
                     // 提示用户输入一个数字
                     println!("Please input a number!");
