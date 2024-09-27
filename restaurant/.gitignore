@@ -1,0 +1,8 @@
+# Ignore the target directory, which is where compiled files are stored
+target/*
+
+# Ignore the .idea directory, which is created by JetBrains IDEs
+.idea/
+
+# Ignore the .vscode directory, which is created by Visual Studio Code
+.vscode/
