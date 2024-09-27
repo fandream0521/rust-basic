@@ -23,6 +23,7 @@ fn main() {
     println!("user.username: {}", user.username);
     println!("user.email: {}", user.email);
     println!("user.sing_in_count: {}", user.sing_in_count);
+    println!("user.active: {}", user.active);
 
     let black = Color(0, 0, 0);
     let origin = Point(0, 0, 0);
