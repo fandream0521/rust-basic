@@ -32,7 +32,7 @@ fn main() {
     println!("change after: {}", s);
 
     let mut s = String::from("hello");
-    let r1 = &mut s;
+    let _r1 = &mut s;
     // let r2 = &mut s; // error: cannot borrow `s` as mutable more than once at a time
     // println!("{}, {}", r1, r2); // error: borrow of `s` occurs here
 
