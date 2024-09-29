@@ -1,0 +1,15 @@
+use rand::Rng;
+use std::fs::File;
+use std::io::Write;
+
+fn main() {
+  let mut rng = rand::thread_rng();
+  let mut file = File::create("/d:/rust-basic/error_handle/test.txt").expect("Unable to create file");
+
+  for _ in 0..1000 {
+    let word: String = (0..10)
+      .map(|_| (0x61u8 + (rng.gen::<f32>() * 26.0) as u8) as char)
+      .collect();
+    writeln!(file, "{}", word).expect("Unable to write to file");
+  }
+}
