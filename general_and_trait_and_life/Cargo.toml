@@ -1,0 +1,6 @@
+[package]
+name = "general_and_trait_and_life"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
