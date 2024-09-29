@@ -1,3 +1,4 @@
+#![allow(unused)]
 use std::{collections::HashMap, str::FromStr};
 
 fn main() {
@@ -11,13 +12,13 @@ pub enum CellType {
     Text(String),
 }
 
-struct commend {
+struct Commend {
     cmd_type: String,
     employee: String,
     department: String,
 }
 
-impl FromStr for commend {
+impl FromStr for Commend {
     type Err = String;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
@@ -25,7 +26,7 @@ impl FromStr for commend {
         if v.len() != 4 {
             return Err("invalid commend".to_string());
         }
-        Ok(commend {
+        Ok(Commend {
             cmd_type: v[0].trim().to_string(),
             employee: v[1].trim().to_string(),
             department: v[3].trim().to_string(),
@@ -41,7 +42,7 @@ fn test3() {
         std::io::stdin()
             .read_line(&mut input)
             .expect("Failed to read line");
-        let cmd: Result<commend, _> = input.parse();
+        let cmd: Result<Commend, _> = input.parse();
         if let Ok(cmd) = cmd {
             let depart = cmd.department;
             department_map
