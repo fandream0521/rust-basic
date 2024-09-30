@@ -1,3 +1,4 @@
+#![allow(unused)]
 use std::cmp::PartialOrd;
 fn main() {
     let list = vec![34, 50, 25, 100, 65];
